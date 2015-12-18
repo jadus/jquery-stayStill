@@ -1,0 +1,31 @@
+body{
+    background-color: #eae8e7;
+}
+
+.main-action{
+    margin: 0.5rem 0 1rem 0;
+}
+
+.collection{
+    border: none;
+}
+
+.hidden-content
+{
+    display: none;
+    height: 0;
+    padding-bottom: 75%;
+}
+
+.container{
+    max-width: 800px;
+}
+
+h1 span {
+    font-size: 18px;
+    line-height: normal;
+}
+
+#about{
+    margin-bottom: 300px;
+}
