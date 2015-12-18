@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-us" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery stayStill</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+        <div class="card z-depth-1 red accent-3 white-text">
+            <div class="card-content">
+                <h1>jQuery stayStill <span>v1.0.0</span></h1>
+            </div>
+        </div>
+        <div class="col stay-still-container" data-animation-duration="500" data-keep-still=true>
+            <a href="https://github.com/jadus/jquery-stayStill" class="waves-effect waves-light btn-large main-action cyan">View on GitHub</a>
+            <div class="card z-depth-1 hidden-content">
+                <div class="card-image">
+                    <img src="http://loremflickr.com/800/600?random=1">
+                </div>
+            </div>
+            <div id="demo" class="card stay-still z-depth-1 section scrollspy">
+                <div class="card-content">
+                    <h4>Demo</h4>
+
+                    <p>
+                        This plugin's purpose is to avoid getting lost on when content is added to the page.<br/>
+                        Click on the "+" button to show hidden kittens on the page.<br>
+                        The plugin will avoid the page to scroll and what was in the middle of the screen will stay there.
+                        <div class="fixed-action-btn">
+                            <button class="btn-floating btn-large cyan toggle-content tooltipped" data-position="left" data-delay="50" data-tooltip="Show kittens">
+                                <i class="large material-icons">visibility</i>
+                            </button>
+                        </div>
+                        <div class="fixed-action-btn" style="display:none">
+                            <button class="btn-floating btn-large cyan toggle-content tooltipped" data-position="left" data-delay="50" data-tooltip="Hide kittens">
+                                <i class="large material-icons">visibility_off</i>
+                            </button>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <div class="card z-depth-1 hidden-content">
+                <div class="card-image">
+                    <img src="http://loremflickr.com/800/600?random=2">
+                </div>
+            </div>
+            <div id="set-up" class="card stay-still z-depth-1 section scrollspy">
+                <div class="card-content">
+                    <h4>Set-up</h4>
+                        <pre><code class="language-markup">&lt;!-- insert jQuery stayStill after jQuery core -->
+&lt;script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js">&lt;/script>
+&lt;script type="text/javascript" src="https://cdn.rawgit.com/jadus/jquery-stayStill/v1.0.0/jquery.stayStill.min.js">&lt;/script></code></pre>
+                </div>
+            </div>
+            <div class="card z-depth-1 hidden-content">
+                <div class="card-image">
+                    <img src="http://loremflickr.com/800/600?random=3">
+                </div>
+            </div>
+            <div id="basic-usage" class="card stay-still z-depth-1 section scrollspy">
+                <div class="card-content">
+                    <h4>Usage</h4>
+                        <pre><code class="language-markup">&lt;!-- add the "stay-still" class to the elements you want to keep still -->
+&lt;div class="container">
+    &lt;div class="stay-still">
+        content1
+    &lt;/div>
+    &lt;div class="stay-still">
+        content2
+    &lt;/div>
+    &lt;!-- more elements -->
+&lt;/div></code></pre>
+                        <pre><code class="language-javascript">
+    // call the saveState method juste before changing the page content
+    $(".container").stayStill('saveState');
+
+    // do something here like adding elements to the page
+
+    // call the resetState method just after changing the page content (in a callback if your changes are async)
+    $(".container").stayStill('resetState');</code></pre>
+                </div>
+            </div>
+            <div class="card z-depth-1 hidden-content">
+                <div class="card-image">
+                    <img src="http://loremflickr.com/800/600?random=4">
+                </div>
+            </div>
+            <div id="about" class="card stay-still z-depth-1 section scrollspy">
+                <div class="card-content">
+                    <h4>About
+                    </h4>
+                    <div class="row">
+                        <div class="col l4">
+                            <ul class="collection">
+                                <li class="collection-item avatar">
+                                    <img src="https://avatars3.githubusercontent.com/u/1061454?v=3&s=140" alt="" class="circle">
+                                    <span class="title">Lucas Ménant</span>
+                                    <p>
+                                        <a href="mailto:lucas.menant@gmail.com">lucas.menant@gmail.com</a><br/>
+                                        <a href="https://github.com/jadus">github.com/jadus</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col l8">
+                            <p>
+                                This is my second open source project.<br/>
+                                Feel free to make comments, raise bugs and ask for features.<br/>
+                                This plugin is used on skipass.com but on an admin only page.<br/>
+                                I'd be glad to know if you use it.<br/>
+                                You could be interested by my other plugin which offers a intuitive way to sort elements in a page :<br/>
+                                <a href="https://github.com/jadus/jquery-sortScroll">jQuery sortScroll</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+<script type="text/javascript" src="prism.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/jadus/jquery-stayStill/v1.0.0/jquery.stayStill.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.tooltipped').tooltip({delay: 50});
+        $(".toggle-content").on("click", function(){
+            $(".stay-still-container").stayStill('saveState');
+            $(".hidden-content").toggle();
+            $('.fixed-action-btn').toggle();
+            $('.material-tooltip').hide();
+            $(".stay-still-container").stayStill('resetState');
+        })
+    });
+</script>
+</body>
+</html>
